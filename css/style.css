@@ -1,0 +1,181 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: white;
+  display: flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 56px;
+  background-color: #202020;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* Sidebar */
+.yt-sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 240px;
+  height: calc(100vh - 56px);
+  background-color: #181818;
+  overflow-y: auto;
+  padding: 10px 0;
+}
+
+.yt-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.yt-logo img {
+  height: 24px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.yt-section {
+  padding: 10px 0;
+}
+
+.yt-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.yt-item .icon {
+  width: 30px;
+}
+
+.yt-item:hover {
+  background-color: #383838;
+}
+
+.section-title {
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.signin-msg {
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+.signin-btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #3ea6ff;
+  border-radius: 20px;
+  color: #3ea6ff;
+  cursor: pointer;
+}
+
+/* Main Content */
+main {
+  margin-left: 240px;
+  margin-top: 56px;
+  padding: 20px;
+  width: calc(100% - 240px);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background-color: #181818;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.video-card video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.video-card h3 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.share-box {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #aaa;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.dots {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #222;
+  color: white;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  right: 0;
+  margin-top: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 5px 0;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
